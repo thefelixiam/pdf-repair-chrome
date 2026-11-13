@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Polish Fixer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>PDF Polish Fixer</h2>
+
+    <p>Wybierz oryginalny dokument PDF:</p>
+
+    <input type="file" id="pdfFile" accept=".pdf" />
+
+    <h3>Reguły poprawiania tekstu</h3>
+
+    <p class="info">
+      Wpisz zamiany w formacie JSON. Kluczem jest błędny tekst, wartością
+      poprawny tekst.
+    </p>
+
+    <textarea id="rules" rows="7">
+{
+  "Za¿ó³æ": "Zażółć",
+  "gêsla": "gęślą",
+  "jaŸñ": "jaźń"
+}</textarea
+    >
+
+    <label>
+      Rozdzielczość:
+      <select id="quality">
+        <option value="2">Dobra</option>
+        <option value="3" selected>Bardzo dobra</option>
+        <option value="4">Wysoka</option>
+      </select>
+    </label>
+
+    <button id="process">NAPRAW PDF</button>
+
+    <div id="status">Gotowy do pracy.</div>
+
+    <script src="vendor/pdf.min.js"></script>
+    <script src="vendor/pdf-lib.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Polish Fixer",
+  "version": "1.0.0",
+  "description": "Naprawianie polskich znakow w dokumentach PDF",
+  "minimum_chrome_version": "109",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PDF Polish Fixer"
+  }
+}
